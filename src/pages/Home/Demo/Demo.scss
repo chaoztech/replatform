@@ -1,0 +1,103 @@
+.demo-page{
+	width: 100%;
+    background-color: var(--primary-color);
+
+    .demo-wrapper{
+        height: 100vh;
+        .video-container{
+            margin-top: -10vh;
+            height: fit-content;
+            position: relative;
+            video{
+                height: 80vh;
+                width: 65vw;
+                margin: 0px;
+                opacity: 0.8;
+                border-radius: 10px;
+            }
+
+            .video-controller{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: var(--primary-color);
+                border-radius: 50%;
+                padding: 15px;  
+                box-shadow: 0px 0px 4px 5px var(--white-color);
+                display: none;
+                z-index: 100;
+
+                img{
+                    height: 30px;
+                    filter: invert(1);
+                    cursor: pointer;
+                }
+
+                &.active{
+                    display: block;
+                    opacity: 1;
+                }
+
+                &.not-active{
+                    display: none;
+                }
+            }
+
+            .opacity-normal{
+                opacity: 1;
+            }
+
+            .video-controller-{
+                display: none;
+            }
+        }   
+    }
+  }
+  
+  .pricing-chip{
+    background-color: var(--white-color);
+  }
+  .pricing-heading{
+    color: var(--white-color);
+  }
+
+@media screen and (max-width: 1080px) {
+    .demo-page{
+        height: 70vh;
+        .demo-wrapper{
+            height: 100%;
+            margin-bottom: 40px;
+            .video-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 2vh 0;
+                video{
+                    height: 60%;
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .demo-page{
+        height: 50vh;
+        .demo-wrapper{
+            height: 100%;
+            .video-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: -2vh;
+                margin-bottom: 5vh;
+                video{
+                    height: 60%;
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

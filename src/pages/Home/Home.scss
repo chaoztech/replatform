@@ -1,0 +1,66 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.home-page{
+  min-height: 100vh;
+}
+
+#services {
+  margin: 0px;
+  padding: 40px 0px 0px 0px;
+  background-color: #ffffff;
+}
+
+#demo {
+  margin: 0px;
+  padding: 40px 0px 0px 0px;
+  background-color: var(--primary-color);
+}
+
+#pricing {
+  margin: 0px;
+  padding: 40px 0px 0px 0px;
+  background-color: var(--secondary-color);
+}
+
+#contactUs {
+  margin: 0px;
+  padding: 40px 0px 0px 0px;
+  background-color: #ffffff;
+}
+
+.pricing-heading {
+  font-size: 36px;
+  font-weight: 500;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.11;
+  letter-spacing: normal;
+  color: #333;
+  text-wrap: nowrap;
+  margin: 0px;
+}
+
+.contact-us-data {
+  margin: 40px 0px;
+
+  p {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #666666;
+    margin-bottom: 0px;
+    transition: color 0.3s;
+
+    a {
+      color: #5c5de8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
