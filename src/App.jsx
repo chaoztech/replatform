@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   RouterProvider,
   createBrowserRouter,
@@ -9,12 +9,17 @@ import Home from "./pages/Home/Home";
 import "./App.scss";
 
 function App() {
-  const routes = createBrowserRouter([
+  const routes = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ],
     {
-      path: "/",
-      element: <Home />,
-    },
-  ]);
+      basename: "/replatform"
+    }
+  );
 
   return (
     <RouterProvider router={routes}></RouterProvider>
