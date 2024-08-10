@@ -3,13 +3,17 @@
     position: relative;
     display: table-cell;
     text-align: center;
-    color: #ffffff;
+    color: rgb(117, 117, 117);
     text-decoration: none;
     font-family: var(--font-family);
-    padding: 10px 20px;
+    padding: 10px;
     transition: 0.2s ease color;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
+
+    &:hover{
+      color: var(--gray-color);
+    }
   }
 
   .dashboard-link{
@@ -77,26 +81,37 @@
       }
     }
   }
+
+  .login-link{
+    .login-btn{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 10px;
+      font-family: var(--font-family);
+      font-size: 15px;
+    }
+  }
+
 }
 
 .navigation-bar-wrapper {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  backdrop-filter: blur(3.5px);
-
   position: fixed;
   transform: translateY(0);
   width: 100%;
   height: 60px;
-  z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  z-index: 1000;
-  background-color: var(--primary-color);
-
+  justify-content: space-between;
+  z-index:20;
+  background-color: var(--white-color);
+  box-sizing: border-box;
+  padding: 40px 300px;
   &.sticky {
     position: fixed;
     top: 0;
@@ -107,7 +122,18 @@
 
   }
 
+  .left-part{
+    .replatform-logo{
+      // padding-left: 200px;
+      img{
+        cursor: pointer;
+        height: 50px;
+      }
+    }
+  }
+
   .navigation-link-section {
+    // padding-right: 200px;
     ul{
       list-style: none;
       li{
@@ -128,21 +154,17 @@
 }
 
 .navigation-mobile-view{
-  position: absolute;
-  top: 5;
   width: 100%;
-  z-index: 1000;
   backdrop-filter: blur(3.5px);
   position: fixed;
   transform: translateY(0);
   width: 100%;
   z-index: 1;
   display: flex;
-  flex-direction: column-reverse;
-  
+  flex-direction: column;
   justify-content: flex-end;
   z-index: 1000;
-  background-color: var(--primary-color);
+  background-color: var(--white-color);
 
   &.sticky {
     position: fixed;
@@ -154,12 +176,28 @@
 
   }
 
+  .left-part{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    .replatform-logo{
+      // padding-left: 200px;
+      img{
+        cursor: pointer;
+        height: 50px;
+      }
+    }
+  }
+
   
   .navigation-link-section{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: var(--primary-color);
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 1px 0px var(--primary-color);
+    margin: 0px 2px 0px;
+    min-height: 100vh;
     ul{
       margin: 0px;
       list-style: none;
@@ -167,7 +205,6 @@
       flex-direction: column;
 
       li{
-        background-color: var(--primary-color);
         display: block;
         @include anchorTag();
       }
@@ -186,20 +223,37 @@
     .close{
       padding: 10px;
       height: 40px !important;
-      border: 1px solid white;
-      filter: invert(100%) brightness(130%) !important;
     }
   }
 
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1300px) {
+  .navigation-bar-wrapper{
+    padding: 40px;
+  }
+
+}
+
+@media screen and (max-width: 920px) {
   .navigation-bar-wrapper{
     .navigation-link-section{
       display: none;
     }
     .hamburger-menu{
       display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .navigation-bar-wrapper{
+    padding: 40px 12px;
+  }
+
+  .navigation-mobile-view{
+    .left-part{
+      padding: 10px 12px;
     }
   }
 

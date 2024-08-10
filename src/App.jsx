@@ -4,7 +4,7 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 
-import Home from "./pages/Home/Home";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 import "./App.scss";
 
@@ -13,7 +13,7 @@ function App() {
     [
       {
         path: "/",
-        element: <Home />,
+        element: <LandingPage />,
       },
     ],
     {
